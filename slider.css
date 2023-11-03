@@ -1,0 +1,89 @@
+/* Slider.css */
+
+.slider-container {
+  perspective: 300px; /* Ajusta la perspectiva según tus preferencias */
+  width: 100%;
+  height: 750px; /* Ajusta la altura según tus necesidades */
+  position: relative; /* Cambia a posición relativa para que los botones sean relativos a este contenedor */
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  width: 500px; /* Ancho reducido para separar las imágenes horizontalmente */
+  height: 498px; /* Ajusta la altura según tus necesidades */
+  margin-right: 90px; /* Espacio entre las imágenes */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+  position: fixed;
+  top: 10%;
+  right:28%;
+  transform:translateX(-50%);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+
+.active {
+  transform: scale(1.2) translateZ(60px); /* Ajusta la escala y la traslación para el efecto coverflow */
+  z-index: 3;
+}
+
+.next-button{
+   /* Centra horizontalmente */
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 65px;
+  cursor:-webkit-grab;
+  transition: background-color 0.3s ease-in-out;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.prev-button {
+  /* Ajusta la distancia desde la parte inferior del slider */
+ /* Centra horizontalmente */
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  cursor:-webkit-grab;
+  transition: background-color 0.3s ease-in-out;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.buttoms{
+position: absolute;
+top: 86%;
+left: 45%;
+
+justify-content: center;
+
+}
+
+.next-button:hover,
+.prev-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.body{
+background-color: cornflowerblue;
+
+}
